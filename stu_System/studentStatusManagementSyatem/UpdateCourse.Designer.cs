@@ -42,6 +42,7 @@
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(243, 184);
+            this.textBox1.MaxLength = 30;
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(405, 179);
@@ -71,6 +72,7 @@
             // courseName
             // 
             this.courseName.Location = new System.Drawing.Point(243, 114);
+            this.courseName.MaxLength = 10;
             this.courseName.Name = "courseName";
             this.courseName.Size = new System.Drawing.Size(405, 25);
             this.courseName.TabIndex = 17;
@@ -88,6 +90,7 @@
             // courseCredit
             // 
             this.courseCredit.Location = new System.Drawing.Point(509, 36);
+            this.courseCredit.MaxLength = 10;
             this.courseCredit.Name = "courseCredit";
             this.courseCredit.Size = new System.Drawing.Size(139, 25);
             this.courseCredit.TabIndex = 15;

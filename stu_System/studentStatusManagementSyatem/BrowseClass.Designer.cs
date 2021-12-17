@@ -92,6 +92,7 @@
             // classid
             // 
             this.classid.Location = new System.Drawing.Point(298, 58);
+            this.classid.MaxLength = 10;
             this.classid.Name = "classid";
             this.classid.Size = new System.Drawing.Size(172, 25);
             this.classid.TabIndex = 5;

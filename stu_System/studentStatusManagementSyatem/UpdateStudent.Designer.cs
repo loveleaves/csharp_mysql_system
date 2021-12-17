@@ -65,6 +65,7 @@
             // textBox5
             // 
             this.textBox5.Location = new System.Drawing.Point(243, 220);
+            this.textBox5.MaxLength = 30;
             this.textBox5.Multiline = true;
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(405, 128);
@@ -93,6 +94,7 @@
             // age
             // 
             this.age.Location = new System.Drawing.Point(476, 107);
+            this.age.MaxLength = 10;
             this.age.Name = "age";
             this.age.Size = new System.Drawing.Size(172, 25);
             this.age.TabIndex = 22;
@@ -131,6 +133,7 @@
             // studentName
             // 
             this.studentName.Location = new System.Drawing.Point(476, 49);
+            this.studentName.MaxLength = 10;
             this.studentName.Name = "studentName";
             this.studentName.Size = new System.Drawing.Size(172, 25);
             this.studentName.TabIndex = 18;

@@ -54,6 +54,7 @@
             // emplain
             // 
             this.emplain.Location = new System.Drawing.Point(135, 210);
+            this.emplain.MaxLength = 30;
             this.emplain.Multiline = true;
             this.emplain.Name = "emplain";
             this.emplain.Size = new System.Drawing.Size(451, 115);
@@ -83,6 +84,7 @@
             // count
             // 
             this.count.Location = new System.Drawing.Point(422, 67);
+            this.count.MaxLength = 10;
             this.count.Name = "count";
             this.count.Size = new System.Drawing.Size(164, 25);
             this.count.TabIndex = 22;
@@ -101,6 +103,7 @@
             // teacher
             // 
             this.teacher.Location = new System.Drawing.Point(135, 67);
+            this.teacher.MaxLength = 10;
             this.teacher.Name = "teacher";
             this.teacher.Size = new System.Drawing.Size(164, 25);
             this.teacher.TabIndex = 20;
@@ -119,6 +122,7 @@
             // className
             // 
             this.className.Location = new System.Drawing.Point(422, 6);
+            this.className.MaxLength = 10;
             this.className.Name = "className";
             this.className.Size = new System.Drawing.Size(164, 25);
             this.className.TabIndex = 18;

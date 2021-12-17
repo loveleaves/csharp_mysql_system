@@ -50,6 +50,7 @@
             // studentId
             // 
             this.studentId.Location = new System.Drawing.Point(277, 66);
+            this.studentId.MaxLength = 10;
             this.studentId.Name = "studentId";
             this.studentId.Size = new System.Drawing.Size(202, 25);
             this.studentId.TabIndex = 1;

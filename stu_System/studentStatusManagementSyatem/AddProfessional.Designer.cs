@@ -61,6 +61,7 @@
             // zhuanyeId
             // 
             this.zhuanyeId.Location = new System.Drawing.Point(237, 51);
+            this.zhuanyeId.MaxLength = 10;
             this.zhuanyeId.Name = "zhuanyeId";
             this.zhuanyeId.Size = new System.Drawing.Size(234, 25);
             this.zhuanyeId.TabIndex = 2;
@@ -68,6 +69,7 @@
             // zhuanyeName
             // 
             this.zhuanyeName.Location = new System.Drawing.Point(237, 104);
+            this.zhuanyeName.MaxLength = 10;
             this.zhuanyeName.Name = "zhuanyeName";
             this.zhuanyeName.Size = new System.Drawing.Size(234, 25);
             this.zhuanyeName.TabIndex = 3;
@@ -107,6 +109,7 @@
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(115, 169);
+            this.textBox1.MaxLength = 30;
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(356, 136);

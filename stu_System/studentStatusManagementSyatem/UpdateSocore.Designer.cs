@@ -51,6 +51,7 @@
             // Score
             // 
             this.Score.Location = new System.Drawing.Point(131, 102);
+            this.Score.MaxLength = 10;
             this.Score.Name = "Score";
             this.Score.Size = new System.Drawing.Size(137, 25);
             this.Score.TabIndex = 13;
@@ -68,6 +69,7 @@
             // courseId
             // 
             this.courseId.Location = new System.Drawing.Point(407, 53);
+            this.courseId.MaxLength = 10;
             this.courseId.Name = "courseId";
             this.courseId.Size = new System.Drawing.Size(165, 25);
             this.courseId.TabIndex = 11;
@@ -85,6 +87,7 @@
             // studentId
             // 
             this.studentId.Location = new System.Drawing.Point(131, 58);
+            this.studentId.MaxLength = 10;
             this.studentId.Name = "studentId";
             this.studentId.Size = new System.Drawing.Size(137, 25);
             this.studentId.TabIndex = 9;

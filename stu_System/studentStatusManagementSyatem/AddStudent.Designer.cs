@@ -60,6 +60,7 @@
             // studentId
             // 
             this.studentId.Location = new System.Drawing.Point(156, 46);
+            this.studentId.MaxLength = 10;
             this.studentId.Name = "studentId";
             this.studentId.Size = new System.Drawing.Size(148, 25);
             this.studentId.TabIndex = 1;
@@ -78,6 +79,7 @@
             // studentName
             // 
             this.studentName.Location = new System.Drawing.Point(389, 46);
+            this.studentName.MaxLength = 10;
             this.studentName.Name = "studentName";
             this.studentName.Size = new System.Drawing.Size(172, 25);
             this.studentName.TabIndex = 3;
@@ -117,6 +119,7 @@
             // age
             // 
             this.age.Location = new System.Drawing.Point(389, 104);
+            this.age.MaxLength = 10;
             this.age.Name = "age";
             this.age.Size = new System.Drawing.Size(172, 25);
             this.age.TabIndex = 7;
@@ -145,6 +148,7 @@
             // textBox5
             // 
             this.textBox5.Location = new System.Drawing.Point(156, 217);
+            this.textBox5.MaxLength = 30;
             this.textBox5.Multiline = true;
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(405, 128);
