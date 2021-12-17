@@ -53,25 +53,46 @@ namespace studentStatusManagementSyatem
             }
             else
             {
-                //查询数据库账户信息
+                // 查询数据库账户信息
                 string username = userName.Text;
                 string password = passWord.Text;
-                string sql = "SELECT COUNT(*) FROM USER WHERE userName='" + username + "' AND userPassword = '" + password + "'; ";
-                MySqlCommand com = new MySqlCommand(sql, conn);
-                if (Convert.ToInt32(com.ExecuteScalar())==0)
+                string sql1 = "SELECT COUNT(*) FROM USER WHERE userName='" + username + "'; ";
+                string sql2 = "SELECT COUNT(*) FROM USER WHERE userName='" + username + "' AND userPassword = '" + password + "'; ";
+                
+                try
                 {
-                    MessageBox.Show("用户名或者密码错误，请重新输入", "用户登录", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    MySqlCommand com1 = new MySqlCommand(sql1, conn);
+                    if (Convert.ToInt32(com1.ExecuteScalar()) == 0)
+                    {
+                        MessageBox.Show("该用户不存在！", "用户登陆", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    }
+                    else
+                    {
+                        // sql查询处理，防sql注入
+                        try
+                        {
+                            MySqlCommand com2 = new MySqlCommand(sql2, conn);
+                            if (Convert.ToInt32(com2.ExecuteScalar()) == 0)
+                            {
+                                MessageBox.Show("密码错误，请重新输入！", "用户登录", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                            }
+                            else
+                            {
+                                Menu stu = new Menu();
+                                stu.Show();
+                                this.Hide();
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("密码含有敏感字符！", "用户登陆", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                        }
+                    }
                 }
-                else
+                catch (Exception ex)
                 {
-                    Menu stu = new Menu();
-                    stu.Show();
-                    this.Hide();
+                    MessageBox.Show("用户名含有敏感字符！", "用户登陆", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 }
-
-
-
-
             }
         }
 

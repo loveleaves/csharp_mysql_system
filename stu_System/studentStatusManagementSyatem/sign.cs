@@ -47,14 +47,39 @@ namespace studentStatusManagementSyatem
                 string username = userName.Text;
                 string password = passWord.Text;
                 //账户存入数据库
-                string sql = "insert into User set userName='" + username + "',userPassword='" + password + "'";
-                MySqlCommand com = new MySqlCommand(sql, conn);
-                com.ExecuteNonQuery();
-                MessageBox.Show("注册成功", "用户注册", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                this.Hide();
-                register stu = new register();
-                stu.Show();
-
+                string sql1 = "SELECT COUNT(*) FROM USER WHERE userName='" + username + "'; ";
+                string sql2 = "insert into User set userName='" + username + "',userPassword='" + password + "'";
+                // 禁止用户名一样
+                try
+                {
+                    MySqlCommand com1 = new MySqlCommand(sql1, conn);
+                    if (Convert.ToInt32(com1.ExecuteScalar()) > 0)
+                    {
+                        MessageBox.Show("用户名已存在！", "用户注册", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    }
+                    else
+                    {
+                        // sql查询处理，防sql注入
+                        try
+                        {
+                            MySqlCommand com2 = new MySqlCommand(sql2, conn);
+                            com2.ExecuteNonQuery();
+                            MessageBox.Show("注册成功", "用户注册", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                            this.Hide();
+                            register stu = new register();
+                            stu.Show();
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("密码含有敏感字符！", "用户注册", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("用户名含有敏感字符！", "用户注册", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                }
+                
             }
         }
 
@@ -63,6 +88,11 @@ namespace studentStatusManagementSyatem
             this.Hide();
             register stu = new register();
             stu.Show();
+        }
+
+        private void userName_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
